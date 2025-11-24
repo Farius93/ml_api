@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  ml_api:
+    build:
+      context: .
+    image: ml_api_image
+    container_name: ml_api_container
+    ports:
+      - "8000:8000"
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
